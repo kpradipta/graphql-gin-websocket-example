@@ -28,9 +28,11 @@ Since the project already use glide, I recommend to install glide.
   |        +--+ graphql-gin-websocket-example/
   |           |
   |           +--+ main.go
-  |              + graph/
-  |              + config/
-  |              + logging/
+  |              + graph/            --Directory related to graphql
+  |              + mqtt/             --Mqtt configuration
+  |              + screenshot/       --Screenshot for readme
+  |              + server/           --Gin-gonic server configuration
+  |              + views/            --html directory for ui
   |              + ... any other source code
   |
   +--+ bin/
