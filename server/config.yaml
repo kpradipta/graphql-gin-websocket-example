@@ -1,0 +1,13 @@
+server:
+  mode: development
+  port: 9911
+
+development:
+  debug: true
+  dburi: pets:pets123@/pets?charset=utf8&parseTime=true
+  dbtype: mysql
+
+production:
+  debug: false
+  dburi: pets:pets123@192.168.2.30/pets?charset=utf*parseTime=true
+  dbtype: production
