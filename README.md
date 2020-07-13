@@ -91,20 +91,15 @@ or
 
 ```
 # Open localhost:9911/socket on your favourite browser****
-```
-![Alt text](screenshot/ss1.png?raw=true "Title")
-```
-# Send some random text on website
-```
-```
+
 # execute call to test send message api
 $ curl --location --request POST 'localhost:9911/query' \
     --header 'Content-Type: application/json' \
     --data-raw '{"query":"mutation {\n    SendMessage(text: \"ya ?\") {\n        text\n        status\n    }\n}","variables":{}}'
+
 # and back to website to check real time message from api
 ```
-![Alt text](screenshot/ss2.png?raw=true "Title")
-
+![Alt text](screenshot/ss2.png)
 
 ### Tools Used:
 In this project, I use some tools listed below. But you can use any simmilar library that have the same purposes. But, well, different library will have different implementation type. Just be creative and use anything that you really need. 
