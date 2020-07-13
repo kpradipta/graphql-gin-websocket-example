@@ -5,10 +5,11 @@
 
 <body>
 <h3>WebSocket Go</h3>
-<form name="publish">
-    <input type="text" name="message">
+<!--<form name="publish">
+    <input type="text" name="message", value="test">
     <input type="submit" value="Send">
 </form>
+-->
 <p>-------------------------- response from server -----------------------</p>
 <pre id="output"></pre>
 
@@ -16,19 +17,19 @@
     url = 'ws://localhost:9911/realtime';
     c = new WebSocket(url);
 
-    document.forms.publish.onsubmit = function () {
-        let outgoingMessage = this.message.value;
+    // document.forms.publish.onsubmit = function () {
+    //     let outgoingMessage = this.message.value;
+    //     send(outgoingMessage, "message");
+    //     return false;
+    // };
 
-        send(outgoingMessage);
-        return false;
-    };
-
-    send = function (text) {
-        $("#output").append((new Date()) + " ==> " + text + "\n")
+    send = function (text, sendFunc) {
+        if (sendFunc != "handshake" ) {
+            $("#output").append((new Date()) + " ==> " + text + "\n")
+        }
         var data = {
-            "id": "test-socket-boss",
-            "text": text,
-            "operation": "send"
+            id: "test-socket",
+            query: "mutation {\n    SendMessage(text: "+text+") {\n        status\n    }\n}",
         }
         c.send(JSON.stringify(data))
     }
@@ -39,7 +40,7 @@
     }
 
     c.onopen = function () {
-       send(document.getElementById("text").value)
+       send("handshake", "handshake")
     }
 </script>
 

@@ -61,9 +61,5 @@ func WsHandler(w http.ResponseWriter, r *http.Request) {
 				RequestString: req.Text,
 			})
 		}
-
-		if req.Operation == "send" {
-
-		}
 	}
 }
