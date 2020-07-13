@@ -63,6 +63,9 @@ $ git clone https://github.com/kpradipta/graphql-gin-websocket-example.git
 # move to project
 $ cd graphql-gin-websocket-example
 
+# install dependecies using glide
+glide install
+
 # build binary file
 $ go build
 
@@ -113,3 +116,6 @@ In this project, I use some tools listed below. But you can use any simmilar lib
 
 - All libraries listed in `glide.yml`
 
+#### Note
+- This api by default running on port 9911, if you want to change port go to server/config.yaml, update views/socket.html line 17, update views/index.html line 536
+- [`Postman Collection`](https://documenter.getpostman.com/view/485855/T17NbkDL?version=latest)

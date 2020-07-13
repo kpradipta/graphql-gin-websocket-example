@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/graphql-gin-websocket-exampler/mqtt"
+	"github.com/graphql-gin-websocket-example/server/config"
+	"github.com/graphql-gin-websocket-example/mqtt"
 	"os"
 
+	"github.com/graphql-gin-websocket-example/server/logging"
 	opLogger "github.com/op/go-logging"
-	"github.com/graphql-gin-websocket-exampler/server/config"
-	"github.com/graphql-gin-websocket-exampler/server/logging"
 )
 
 var log = logging.MustGetLogger("logs")
@@ -20,14 +20,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	log.Info("","############ INIT MQTT ##############")
+	log.Info("", "############ INIT MQTT ##############")
 	mqtt.Init()
-	log.Info("","############ INIT WEB ENGINE ##############")
+	log.Info("", "############ INIT WEB ENGINE ##############")
 	config.InitWebEngine()
-	log.Info("","############ INIT ROUTER ##############")
+	log.Info("", "############ INIT ROUTER ##############")
 	config.InitRouter()
-	log.Info("","############ INIT DONE CHEERS!! ##############")
-
+	log.Info("", "############ INIT DONE CHEERS!! ##############")
 
 }
 

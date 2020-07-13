@@ -30,7 +30,7 @@ type Logger struct {
 
 func (log *Logger) Debug(userid string, args ...interface{}) {
 	args = append([]interface{}{"[" + log.Hostname + "] [" + userid + "]"}, args...)
-	log.Logger.Debug("log location "+userid, args...)
+	log.Logger.Debug("log location "+userid, args)
 }
 
 func (log *Logger) Debugf(userid string, string_format string, args ...interface{}) {

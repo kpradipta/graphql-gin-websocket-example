@@ -3,19 +3,17 @@ package mqtt
 import (
 	"fmt"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/graphql-gin-websocket-exampler/server/logging"
+	"github.com/graphql-gin-websocket-example/server/logging"
 	"os"
 )
-
 
 var client mqtt.Client
 var log = logging.MustGetLogger("logs")
 
-
-
 var iter = 0
-func Init(){
-	log.Info("","START INIT MQTT")
+
+func Init() {
+	log.Info("", "START INIT MQTT")
 	if client == nil {
 		opts := mqtt.NewClientOptions().AddBroker("tcp://localhost:1883")
 		opts.SetClientID("mac-go")

@@ -1,11 +1,12 @@
 package graph
+
 /*
 Publisher for real time api
 */
 import (
 	"fmt"
 	"github.com/gorilla/websocket"
-	"github.com/graphql-gin-websocket-exampler/server/socket"
+	"github.com/graphql-gin-websocket-example/server/socket"
 )
 
 func publish(text string) {

@@ -3,15 +3,15 @@ package config
 import (
 	"github.com/foolin/gin-template"
 	"github.com/gin-gonic/gin"
-	"github.com/graphql-gin-websocket-exampler/graph"
-	"github.com/graphql-gin-websocket-exampler/server/socket"
+	"github.com/graphql-gin-websocket-example/graph"
+	"github.com/graphql-gin-websocket-example/server/socket"
 	"net/http"
 )
+
 func InitRouter() {
 	port := MustGetString("server.port")
 	router := GetEngine()
 	router.HTMLRender = gintemplate.Default()
-
 
 	router.GET("/ping", func(c *gin.Context) {
 		c.String(200, "pong")
@@ -29,9 +29,7 @@ func InitRouter() {
 		socket.WsHandler(c.Writer, c.Request)
 	})
 
-	router.POST("/query", graph.MessageHandler() )
+	router.POST("/query", graph.MessageHandler())
 
 	router.Run(":" + port)
 }
-
-

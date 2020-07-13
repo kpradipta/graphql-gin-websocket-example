@@ -1,24 +1,24 @@
 package graph
+
 /*
 Resolver class to handle business logic
 */
 import (
+	"github.com/graphql-gin-websocket-example/mqtt"
 	"github.com/graphql-go/graphql"
-	"github.com/graphql-gin-websocket-exampler/mqtt"
 )
 
 var messages []Message
 
 type Message struct {
-	Text string
-	Status  string
+	Text   string
+	Status string
 }
-
 
 func SendMessageResolver(p graphql.ResolveParams) (interface{}, error) {
 	text := p.Args["text"].(string)
 	response := Message{
-		Text: text,
+		Text:   text,
 		Status: "Sent",
 	}
 

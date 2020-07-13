@@ -2,9 +2,9 @@ package graph
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/graphql-gin-websocket-example/server/logging"
 	"github.com/graphql-go/graphql"
 	"github.com/graphql-go/handler"
-	"github.com/graphql-gin-websocket-exampler/server/logging"
 )
 
 var log = logging.MustGetLogger("messaging")
@@ -23,7 +23,7 @@ var MessageGraphQL = graphql.NewObject(
 	},
 )
 
-func MessageHandler() gin.HandlerFunc{
+func MessageHandler() gin.HandlerFunc {
 	query := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
@@ -53,7 +53,7 @@ func MessageHandler() gin.HandlerFunc{
 	})
 	// 4
 	Schema, err := graphql.NewSchema(graphql.SchemaConfig{
-		Query: query,
+		Query:    query,
 		Mutation: mutation,
 	})
 
@@ -63,7 +63,7 @@ func MessageHandler() gin.HandlerFunc{
 	}
 
 	// 5
-	h :=handler.New(&handler.Config{
+	h := handler.New(&handler.Config{
 		Schema: &Schema,
 		Pretty: true,
 	})
@@ -73,7 +73,7 @@ func MessageHandler() gin.HandlerFunc{
 	}
 }
 
-func RealTime() gin.HandlerFunc{
+func RealTime() gin.HandlerFunc {
 	messaging := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
@@ -95,7 +95,7 @@ func RealTime() gin.HandlerFunc{
 	}
 
 	// 5
-	h :=handler.New(&handler.Config{
+	h := handler.New(&handler.Config{
 		Schema: &Schema,
 		Pretty: true,
 	})
