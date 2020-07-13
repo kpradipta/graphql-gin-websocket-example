@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/warung-pintar/mqtt"
+	"github.com/graphql-gin-websocket-exampler/mqtt"
 	"os"
 
 	opLogger "github.com/op/go-logging"
-	"github.com/warung-pintar/server/config"
-	"github.com/warung-pintar/server/logging"
+	"github.com/graphql-gin-websocket-exampler/server/config"
+	"github.com/graphql-gin-websocket-exampler/server/logging"
 )
 
 var log = logging.MustGetLogger("logs")

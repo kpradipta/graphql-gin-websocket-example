@@ -3,7 +3,7 @@ package mqtt
 import (
 	"fmt"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/warung-pintar/server/logging"
+	"github.com/graphql-gin-websocket-exampler/server/logging"
 	"os"
 )
 

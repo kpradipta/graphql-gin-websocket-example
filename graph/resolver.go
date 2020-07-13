@@ -4,7 +4,7 @@ Resolver class to handle business logic
 */
 import (
 	"github.com/graphql-go/graphql"
-	"github.com/warung-pintar/mqtt"
+	"github.com/graphql-gin-websocket-exampler/mqtt"
 )
 
 var messages []Message

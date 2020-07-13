@@ -23,17 +23,16 @@ Since the project already use glide, I recommend to install glide.
   |  |
   |  +--+ github.com/
   |     |
-  |     +--+ kpradipta/
+  |     |
+  |     +--+ graphql-gin-websocket-example/
   |        |
-  |        +--+ graphql-gin-websocket-example/
-  |           |
-  |           +--+ main.go
-  |              + graph/            --Directory related to graphql
-  |              + mqtt/             --Mqtt configuration
-  |              + screenshot/       --Screenshot for readme
-  |              + server/           --Gin-gonic server configuration
-  |              + views/            --html directory for ui
-  |              + ... any other source code
+  |        +--+ main.go
+  |           + graph/            --Directory related to graphql
+  |           + mqtt/             --Mqtt configuration
+  |           + screenshot/       --Screenshot for readme
+  |           + server/           --Gin-gonic server configuration
+  |           + views/            --html directory for ui
+  |           + ... any other source code
   |
   +--+ bin/
   |  |
@@ -50,7 +49,13 @@ Here is the steps to run the application
 
 ```bash
 # move to directory
-$ cd $GOPATH
+$ cd $GOPATH/src
+
+# create github.com directory if not exist
+mkdir github.com
+
+# move to github directory
+cd github.com
 
 # clone into YOUR $GOPATH/src
 $ git clone https://github.com/kpradipta/graphql-gin-websocket-example.git

@@ -3,8 +3,8 @@ package config
 import (
 	"github.com/foolin/gin-template"
 	"github.com/gin-gonic/gin"
-	"github.com/warung-pintar/graph"
-	"github.com/warung-pintar/server/socket"
+	"github.com/graphql-gin-websocket-exampler/graph"
+	"github.com/graphql-gin-websocket-exampler/server/socket"
 	"net/http"
 )
 func InitRouter() {

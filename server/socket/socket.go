@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/gorilla/websocket"
-	"github.com/warung-pintar/server/logging"
+	"github.com/graphql-gin-websocket-exampler/server/logging"
 )
 
 var log = logging.MustGetLogger("socket")

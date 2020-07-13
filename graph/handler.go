@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/graphql-go/graphql"
 	"github.com/graphql-go/handler"
-	"github.com/warung-pintar/server/logging"
+	"github.com/graphql-gin-websocket-exampler/server/logging"
 )
 
 var log = logging.MustGetLogger("messaging")

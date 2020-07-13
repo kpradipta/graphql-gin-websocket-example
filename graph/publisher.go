@@ -5,7 +5,7 @@ Publisher for real time api
 import (
 	"fmt"
 	"github.com/gorilla/websocket"
-	"github.com/warung-pintar/server/socket"
+	"github.com/graphql-gin-websocket-exampler/server/socket"
 )
 
 func publish(text string) {

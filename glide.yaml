@@ -1,4 +1,4 @@
-package: github.com/warung-pintar
+package: github.com/graphql-gin-websocket-example
 import:
 - package: github.com/op/go-logging
 - package: github.com/gin-gonic/gin
