@@ -21,7 +21,6 @@ func InitWebEngine() {
 		WebEngine.Use(gin.Logger(), gin.Recovery())
 	}
 
-
 }
 
 func GetEngine() *gin.Engine {
