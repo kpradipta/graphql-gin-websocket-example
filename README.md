@@ -52,10 +52,10 @@ Here is the steps to run the application
 $ cd $GOPATH/src
 
 # create github.com directory if not exist
-mkdir github.com
+$ mkdir github.com
 
 # move to github directory
-cd github.com
+$ cd github.com
 
 # clone into YOUR $GOPATH/src
 $ git clone https://github.com/kpradipta/graphql-gin-websocket-example.git
