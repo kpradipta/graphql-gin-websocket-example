@@ -33,7 +33,7 @@ var Subscribers sync.Map
 
 var subsLength int
 
-// Handler ...
+// Handler *test code scan
 func WsHandler(w http.ResponseWriter, r *http.Request) {
 	conn, err := wsupgrader.Upgrade(w, r, nil)
 	if err != nil {
